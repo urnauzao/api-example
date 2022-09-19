@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "36fed565-0077-4791-81d3-63ad07e109c3",
+		"name": "Laravel 1ª API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cursos",
+			"item": [
+				{
+					"name": "Cursos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/curso",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"curso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Novo Curso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Matemática\",\r\n    \"descricao\": \"Curso de matemática aplicada para professores do ensino fundamental\",\r\n    \"maximo_alunos\": 20,\r\n    \"preco\": 10000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/curso",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"curso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Curso",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Português\",\r\n    \"descricao\": \"Curso de lingua portuguesa para professores do ensino fundamental\",\r\n    \"maximo_alunos\": 34,\r\n    \"preco\": 297.90\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/curso/{{curso_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"curso",
+								"{{curso_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Curso",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/curso/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"curso",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remover Curso",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/curso/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"curso",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost"
+		},
+		{
+			"key": "curso_id",
+			"value": "1"
+		}
+	]
+}
